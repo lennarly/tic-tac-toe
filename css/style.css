@@ -1,0 +1,134 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+  margin: 30px 0 30px;
+}
+
+.container {
+  max-width: 500px;
+  padding: 25px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.header__title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.header__subtitle {
+  line-height: 2;
+  font-size: 18px;
+  font-weight: bold;
+}
+.header__subtitle::before {
+  content: "";
+  display: block;
+  border-bottom: #000000 2px solid;
+  width: 300px;
+  margin: 10px auto 10px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+  grid-template-rows: repeat(3, 1fr);
+  height: 500px;
+  margin: 30px auto;
+  font-size: 30px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+
+.grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(4) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(5) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+
+.grid > *:nth-child(6) {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(7) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(8) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+}
+
+.grid > *:nth-child(9) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.grid__cell {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.grid__cell:hover {
+  background-color: #dee2e6;
+}
+
+.board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+}
+.board__center {
+  -ms-grid-column-align: center;
+  justify-self: center;
+}
+.board__computer {
+  -ms-grid-column-align: end;
+  justify-self: end;
+}
